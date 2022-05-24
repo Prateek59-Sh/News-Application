@@ -45,11 +45,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             }
         });
 
-        holder.mtime.setText("Publish At:-"+modelClassArrayList.get(position).getPublishAt());
+        //holder.mtime.setText("Publish At:-"+modelClassArrayList.get(position).getPublishAt());
+        //holder.mauthor.setText(modelClassArrayList.get(position).getAuthor());
+        //holder.mheading.setText(modelClassArrayList.get(position).getTitles());
+        //holder.mcontent.setText(modelClassArrayList.get(position).getDescription());
+        //Glide.with(context).load(modelClassArrayList.get(position).getUrlToImage()).into(holder.imageView);
+
+        holder.mtime.setText("Publish At:-"+modelClassArrayList.get(position).getPublishedAt());
         holder.mauthor.setText(modelClassArrayList.get(position).getAuthor());
-        holder.mheading.setText(modelClassArrayList.get(position).getTitles());
+        holder.mheading.setText(modelClassArrayList.get(position).getTitle());
         holder.mcontent.setText(modelClassArrayList.get(position).getDescription());
         Glide.with(context).load(modelClassArrayList.get(position).getUrlToImage()).into(holder.imageView);
+
 
 
     }
